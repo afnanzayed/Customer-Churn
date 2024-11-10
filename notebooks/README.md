@@ -12,21 +12,23 @@ This repository contains a comprehensive analysis and machine learning pipeline 
 7. [Conclusion](#conclusion)
 
 ## Project Overview
-The goal of this project is to predict customer churn using various machine learning models. By analyzing customer demographics, account details, and engagement metrics, we aim to identify the best-performing model to help businesses improve customer retention.
+The goal of this project is to predict customer churn in the telecom sector using various machine learning models. By analyzing account details, usage patterns, and customer service interactions, we aim to identify the best-performing model to help businesses improve customer retention.
 
 ## Dataset
-The dataset includes demographic information, account details, and engagement data for each customer, with a target variable indicating churn.
+The dataset includes customer account information, service usage, and engagement data, with a target variable indicating whether each customer has churned.
 
 **Key Features**:
-- Demographic data (e.g., age, gender)
-- Account information (e.g., tenure, subscription type)
-- Engagement metrics (e.g., number of logins, usage patterns)
+- Account Details: Information on account tenure (weeks with the service) and contract renewal status.
+- Service Usage: Data plan subscription, data usage volume, and monthly charges.
+- Customer Service Interaction: Number of calls to customer service, which may indicate dissatisfaction.
+- Call Activity Metrics: Metrics such as daytime minutes, number of calls, overage fees, and roaming minutes.
 
 ## Exploratory Data Analysis (EDA)
-The EDA phase visualizes and examines relationships between features and their correlation with churn. Key analyses include:
-- Distribution of churn by demographic groups
-- Correlation between features
-- Visualizations to understand feature distributions and potential outliers
+In the EDA phase, we conducted an in-depth analysis, including customer segmentation and random under-sampling:
+- Customer Segmentation: Grouped customers based on behavioral and demographic attributes to identify patterns associated with churn.
+- Random Under-Sampling: Balanced the dataset by reducing instances from the majority class, helping improve model performance on imbalanced data.
+- Feature Distribution: Visualized key features like DayMins, MonthlyCharge, and CustServCalls for churned vs. non-churned customers.
+- Correlation Check: Analyzed feature correlations to identify significant relationships impacting churn.
 
 ## Feature Engineering & Scaling
 Feature engineering techniques were applied to prepare the data for modeling, including:
